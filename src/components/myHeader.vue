@@ -1,6 +1,6 @@
 <template>
-	<div class="ub header">
-		<div class="left-l" :class="{'back':backIcon?true:false}" @click="back"></div>
+	<div class="ub header" :style="styleObj">
+		<div class="left-l" :class="{'back':backArrow?true:false}"  @click="back"></div>
 		<div class="ub ub-ac ub-pc ub-f1 center">
 			{{title}}
 		</div>
@@ -13,7 +13,24 @@
 			title:{
 				type: String
 			},
-			backIcon:{
+			headerBg:{
+				type: String,
+				default:'lightseagreen'
+			},
+			styleObj:{
+				type: Object,
+				default: function () {
+				    return {
+							'backgroundColor':this.headerBg
+						}
+				 }
+			},
+			
+			backArrow:{
+				type: Boolean,
+				default:true
+			},
+			backClick:{
 				type: Boolean,
 				default:true
 			}
@@ -28,14 +45,19 @@
 		},
 		methods:{
 			back(){
-				history.back();
+				if(this.backClick){
+					history.back();
+				}else{
+					return ;
+				}
+				
 			}
 		}
 	}
 </script>
 
 <style lang='scss' scoped>
-	.header {
+.header {
     width: 100%;
     height: 90px;
     background-color: lightseagreen;
@@ -52,7 +74,12 @@
 .header>div.left-l {
     width: 100px;
 }
-
+.header>div.back {
+    background-image: url(./back.png);
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 26%;
+}
 .header>div.center {
     color: #fff;
     line-height: 90px;

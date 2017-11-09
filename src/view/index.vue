@@ -1,16 +1,14 @@
 <template>
 	<div>
-		<myHeader title="VUE常用提示弹框组件"></myHeader>
+		<myHeader :backArrow = false :backClick = false title="vue常用组件"></myHeader>
 		<div class="ub ub-ver list">
-			<div class="ub ub-ac ub-f1 list-item" @click="toastTop">tosat提示框（顶部）</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="toastMiddle">tosat提示框（屏幕中间）</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="toastBottom">tosat提示框（底部）</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="loadingTop">loading提示框（顶部）</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="loadingMiddle">loading提示框（屏幕中间）</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="loadingBottom">loading提示框（底部）</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="alert">alert提示框</div>
-			<div class="ub ub-ac ub-f1 list-item" @click="confirm">confirm提示框</div>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/toast">toast提示框</router-link>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/loading">loading提示框</router-link>
+			<div class="ub ub-ac ub-f1 list-item" @click="alert">alert弹框</div>
+			<div class="ub ub-ac ub-f1 list-item" @click="confirm">confirm弹框</div>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/header">header组件</router-link>
 		</div>
+		<!--<div class="ub ub-ac ub-f1 github" @click="togithub">点击进入github项目地址</div>-->
 	</div>
 </template>
 
@@ -22,26 +20,8 @@
 			myHeader
 		},
 		methods:{
-			toastTop(){
-				app.toast('hello world!','top')
-			},
-			toastMiddle(){
-				app.toast('hello world!','middle')
-			},
-			toastBottom(){
-				app.toast('hello world!','bottom')
-			},
-			loadingTop(){
-				app.loading('Loading','top')
-			},
-			loadingMiddle(){
-				app.loading('Loading','middle')
-			},
-			loadingBottom(){
-				app.loading('Loading','bottom')
-			},
 			alert(){
-				app.alert('提示','hello world!')
+				app.alert('提示','hello world!');
 			},
 			confirm(){
 				app.confirm('提示','确定退出？',{'sure':'你点击了确定！','cancle':'你点击了取消'},function(){
@@ -54,11 +34,11 @@
 	}
 </script>
 
-<style>
-	.list{
-		padding:30px;
-	}
-	.list-item{
+<style scoped lang="scss">
+	@import '../sass/style.scss';
+	.github{
+		width:90%;
+		margin: 100px auto 0;
 		height:80px;
 		font-size:28px;
 		border-bottom: thin solid #ccc;
