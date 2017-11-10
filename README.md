@@ -3,8 +3,9 @@
 ```bush
 $ git clone https://github.com/clearself/vuetips.git
 ```
-### 安装依赖
+### 进入项目根目录安装依赖
 ```bush
+$ cd vuetips
 $ npm install
 ```
 ### 启动服务
