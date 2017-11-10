@@ -5,6 +5,8 @@
 			<div class="ub ub-ac ub-f1 list-item" @click="toastTop">toast提示框（顶部）</div>
 			<div class="ub ub-ac ub-f1 list-item" @click="toastMiddle">toast提示框（屏幕中间）</div>
 			<div class="ub ub-ac ub-f1 list-item" @click="toastBottom">toast提示框（底部）</div>
+			<div class="ub ub-ac ub-f1 list-item" @click="toast5s">toast提示框（5s后关闭）</div>
+			
 			<div class="ub ub-ac ub-f1 list-item marT50" @click="toastHide">关闭toast提示框</div>
 		</div>
 	</div>
@@ -26,6 +28,9 @@
 			},
 			toastBottom(){
 				app.toast('hello world!','bottom')
+			},
+			toast5s(){
+				app.toast('hello world!','top',5000)
 			},
 			toastHide(){
 				app.hidetoast();

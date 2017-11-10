@@ -7,8 +7,10 @@
 			<div class="ub ub-ac ub-f1 list-item" @click="alert">alert弹框</div>
 			<div class="ub ub-ac ub-f1 list-item" @click="confirm">confirm弹框</div>
 			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/header">header组件</router-link>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/button">button组件</router-link>
+			
 		</div>
-		<!--<div class="ub ub-ac ub-f1 github" @click="togithub">点击进入github项目地址</div>-->
+		
 	</div>
 </template>
 

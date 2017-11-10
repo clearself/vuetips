@@ -5,6 +5,7 @@
 			<div class="ub ub-ac ub-f1 list-item" @click="loadingTop">loading提示框（顶部）</div>
 			<div class="ub ub-ac ub-f1 list-item" @click="loadingMiddle">loading提示框（屏幕中间）</div>
 			<div class="ub ub-ac ub-f1 list-item" @click="loadingBottom">loading提示框（底部）</div>
+			<div class="ub ub-ac ub-f1 list-item" @click="loading5s">loading提示框（5s后关闭）</div>
 			<div class="ub ub-ac ub-f1 list-item marT50" @click="loadingHide">关闭loading提示框</div>
 		</div>
 	</div>
@@ -26,6 +27,9 @@
 			},
 			loadingBottom(){
 				app.loading('Loading','bottom')
+			},
+			loading5s(){
+				app.loading('Loading','top',5000)
 			},
 			loadingHide(){
 				app.hideloading();

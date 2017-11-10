@@ -1,4 +1,4 @@
-// fix 路由切换时弹窗不消失的 bug
+//解决路由切换弹框不消失问题
 export default {
 	mounted () {
         let listener = () => {
