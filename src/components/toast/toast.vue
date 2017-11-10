@@ -21,7 +21,7 @@
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
 .toast {
     position: fixed;
     left:50%;

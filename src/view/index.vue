@@ -8,18 +8,26 @@
 			<div class="ub ub-ac ub-f1 list-item" @click="confirm">confirm弹框</div>
 			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/header">header组件</router-link>
 			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/button">button组件</router-link>
-			
+			<div class="ub ub-ac ub-f1 list-item" @click="Popup">Popup弹窗</div>
 		</div>
-		
 	</div>
 </template>
 
 <script>
+	import Popup from '../components/Popup/Popup'
 	import myHeader from '../components/myHeader'
 	import app from '../public.js'
 	export default {
 		components: {
 			myHeader
+		},
+		data(){
+			return{
+				
+			}
+		},
+		mounted(){
+			
 		},
 		methods:{
 			alert(){
@@ -31,6 +39,15 @@
 				},function(){
 					app.toast(this.cancle,'top');
 				})
+			},
+			Popup(){
+				var arrList = ['大学','中学','小学']
+				Popup.show({
+					itemList:arrList,
+					indexClick:function(index){
+						app.toast(arrList[index])
+					}
+				});
 			}
 		}
 	}

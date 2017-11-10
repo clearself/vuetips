@@ -26,7 +26,7 @@
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
 .loadstyle {
     position: fixed;
     left:50%;
