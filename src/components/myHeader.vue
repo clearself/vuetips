@@ -74,7 +74,7 @@
     width: 100px;
 }
 .fixed{
-	position: absolute;
+	position: fixed;
 	z-index: 99999;
 }
 .header>div.left-l {

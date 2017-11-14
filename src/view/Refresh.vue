@@ -30,7 +30,6 @@
 <script>
 	import myHeader from '../components/myHeader'
 	import Scroll from '../components/scroll/scroll';
-	var num = 0;
 	export default {
 		name: 'simple-pull-to-refresh',
 		components: {
@@ -59,8 +58,7 @@
 			refresh(loaded) {
 				var that = this;
 				setTimeout(() => {
-					num ++;
-					this.dataList.unshift('新添加第'+num+'条数据')
+					this.dataList.unshift('新添加一条数据')
 					loaded('done');
 				}, 2000);
 			},
