@@ -12,6 +12,7 @@
     "better-scroll": "^1.4.1",
     "lib-flexible": "^0.3.2",
     "vue": "^2.2.2",
+    "vue-pull-to": "^0.1.5",
     "vue-router": "^2.2.0",
     "vux": "^2.7.1"
   },

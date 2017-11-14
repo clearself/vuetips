@@ -1,5 +1,5 @@
 <template>
-	<div class="ub header" :style="styleObj">
+	<div class="ub header" :class="{'fixed':fixed}" :style="styleObj">
 		<div class="left-l" :class="{'back':backArrow?true:false}"  @click="back"></div>
 		<div class="ub ub-ac ub-pc ub-f1 center">
 			{{title}}
@@ -25,7 +25,10 @@
 						}
 				 }
 			},
-			
+			fixed:{
+				type: Boolean,
+				default:false
+			},
 			backArrow:{
 				type: Boolean,
 				default:true
@@ -70,7 +73,10 @@
 .header>div.left-r {
     width: 100px;
 }
-
+.fixed{
+	position: absolute;
+	z-index: 99999;
+}
 .header>div.left-l {
     width: 100px;
 }

@@ -9,6 +9,10 @@
 			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/header">header组件</router-link>
 			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/button">button组件</router-link>
 			<div class="ub ub-ac ub-f1 list-item" @click="Popup">Popup弹窗</div>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/refresh">scroll（下拉刷新）</router-link>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/loadmore">scroll（上拉加载更多）</router-link>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/infinite">scroll（上拉加载更多infinite）</router-link>
+			<router-link tag="div" class="ub ub-ac ub-f1 list-item" to="/scroller">scroll（下拉刷新，上拉加载更多）</router-link>
 		</div>
 	</div>
 </template>
