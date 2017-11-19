@@ -2,7 +2,7 @@ var path = require('path')
 var utils = require('./utils')
 
 var projectRoot = path.resolve(__dirname, '../')
-const vuxLoader = require('vux-loader')
+//const vuxLoader = require('vux-loader')
 
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
@@ -11,7 +11,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-let webpackConfig = {
+module.exports = {
   entry: {
     app: './src/main.js'
   },
@@ -57,7 +57,7 @@ let webpackConfig = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-          limit: 500,
+          limit: 100, //小于100K的图片会被打包到组件里
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
@@ -74,6 +74,6 @@ let webpackConfig = {
 }
 
 
-module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: ['vux-ui']
-})
+//module.exports = vuxLoader.merge(webpackConfig, {
+//plugins: ['vux-ui']
+//})

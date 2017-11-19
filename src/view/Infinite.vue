@@ -55,7 +55,6 @@
 					for(var i=0;i<10;i++){
 						this.dataList.push('新加载的10条数据')
 					}
-					loaded('done');
 				}, 100);
 			}
 		}
